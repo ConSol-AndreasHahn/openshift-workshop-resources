@@ -1,0 +1,10 @@
+resources:
+  - ../../base
+  - bitnami.helm-repository.yaml
+  - nginx.helm-release.yaml
+
+
+namespace: solution-13
+
+patchesStrategicMerge:
+  - patch-namespace.yaml
