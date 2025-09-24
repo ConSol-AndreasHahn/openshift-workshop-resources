@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workshop-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: workshop-app
+  template:
+    metadata:
+      labels:
+        app: workshop-app
+    spec:
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: app-data
+      serviceAccountName: image-puller
+      containers:
+        - name: workshop-app
+          image: image-registry.openshift-image-registry.svc:5000/gh-runners/nextjs-workshop:latest
+          env:
+            - name: GREETING_DEFAULT
+              value: "Max Mustermann"
+            - name: HOSTNAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          ports:
+            - containerPort: 3000
+          volumeMounts:
+            - name: data
+              mountPath: /mnt/data
+          resources:
+            requests:
+              cpu: 10m
+              memory: 64Mi
+            limits:
+              cpu: 100m
+              memory: 256Mi

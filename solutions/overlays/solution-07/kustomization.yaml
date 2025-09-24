@@ -1,0 +1,10 @@
+resources:
+  - ../../base
+  - workshop.deployment.yaml
+  - workshop.service.yaml
+  - workshop.route.yaml
+
+namespace: solution-7
+
+patchesStrategicMerge:
+  - patch-namespace.yaml

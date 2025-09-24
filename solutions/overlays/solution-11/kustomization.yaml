@@ -1,0 +1,11 @@
+resources:
+  - ../../base
+  - workshop.deployment.yaml
+  - workshop.service.yaml
+  - workshop.route.yaml
+  - workshop.rolebinding.yaml
+
+namespace: solution-11
+
+patchesStrategicMerge:
+  - patch-namespace.yaml

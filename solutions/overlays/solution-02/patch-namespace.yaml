@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: workshop-default
+  annotations:
+    kustomize.config.k8s.io/namespace: solution-2

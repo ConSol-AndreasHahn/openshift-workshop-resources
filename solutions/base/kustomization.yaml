@@ -1,0 +1,4 @@
+resources:
+  - workshop.namespace.yaml
+  - workshop.sa.yaml
+  - deny-ingress.networkpolicy.yaml

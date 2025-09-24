@@ -1,0 +1,29 @@
+name: Build and Push Container
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: [openshift]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set registry credentials
+        run: |
+          mkdir -p ~/.docker
+          echo "{\"auths\":{\"${{ secrets.OS_REGISTRY }}\":{\"auth\":\"$(echo -n "${{ secrets.OS_USER }}:${{ secrets.OS_TOKEN }}" | base64 -w0)\"}}}" > ~/.docker/config.json
+
+      - name: Build and push image
+        run: |
+          export DOCKER_BUILDKIT=1
+          buildctl --addr unix:///runner/buildkit-root/buildkitd.sock build \
+            --frontend dockerfile.v0 \
+            --local context=./workshop-app-ts \
+            --local dockerfile=./workshop-app-ts \
+            --output type=image,name=${{ secrets.OS_REGISTRY }}/gh-runners/nextjs-workshop:latest,push=true,tlsverify=false
+

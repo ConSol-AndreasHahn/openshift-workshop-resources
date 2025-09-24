@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  hostname: OpenShift
+  config.yaml: |
+    backgroundColor: "#E1AD01"
+    some-other-config: some-value
