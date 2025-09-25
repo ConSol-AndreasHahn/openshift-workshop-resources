@@ -11,6 +11,8 @@ spec:
         kind: HelmRepository
         name: bitnami
   values:
+    image:
+      tag: latest
     staticSiteConfigmap: static-site
     service:
       type: ClusterIP
