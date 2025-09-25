@@ -21,3 +21,9 @@ spec:
       limits:
         cpu: 100m
         memory: 512Mi
+    ingress:
+      enabled: true
+      hostname: nginx-solution-13.apps.cluster-4rfbf.dynamic.redhatworkshops.io
+      tls: true
+      selfSigned: true
+
