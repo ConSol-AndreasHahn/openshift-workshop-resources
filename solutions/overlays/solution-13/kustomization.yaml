@@ -1,5 +1,6 @@
 resources:
   - ../../base
+  - static-site.configmap.yaml
   - bitnami.helm-repository.yaml
   - nginx.helm-release.yaml
 
