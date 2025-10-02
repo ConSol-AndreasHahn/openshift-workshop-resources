@@ -12,6 +12,8 @@ spec:
         name: bitnami
   values:
     image:
+      registry: docker.io
+      repository: bitnamilegacy/nginx
       tag: latest
     staticSiteConfigmap: static-site
     service:
