@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: term-message
+  name: term-message
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      deployment: term-message
+  template:
+    metadata:
+      labels:
+        deployment: term-message
+    spec:
+      containers:
+      - image: docker.io/busybox
+        imagePullPolicy: Always
+        name: term-message
+        command:
+        - sh
+        - -c
+        - >
+          echo "$(date +%Y-%m-%dT%H:%M:%S) Started" &&
+          sleep 10 &&
+          echo "$(date +%Y-%m-%dT%H:%M:%S) Authentication failed" &&
+          exit 1
+        terminationMessagePolicy: FallbackToLogsOnError
+        resources:
+          requests:
+            cpu: 10m
+            memory: 64Mi
+          limits:
+            cpu: 100m
+            memory: 64Mi

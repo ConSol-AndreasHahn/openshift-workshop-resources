@@ -17,6 +17,9 @@ COPY --from=builder /app/package.json ./package.json
 
 RUN apk --no-cache add curl
 
+RUN mkdir /config && \
+    echo 'some message' > /config/message.txt
+
 ENV PORT=3000
 
 EXPOSE 3000

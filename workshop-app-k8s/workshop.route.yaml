@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: workshop-app
+  labels:
+    app: workshop-app
+spec:
+  host: CHANGE_ME
+  to:
+    kind: Service
+    name: workshop-app
+  port:
+    targetPort: 3000
+  tls:
+    termination: edge
