@@ -1,0 +1,14 @@
+image:
+  registry: docker.io
+  repository: bitnamilegacy/nginx
+  tag: 1.29.1
+staticSiteConfigmap: static-site
+service:
+  type: ClusterIP
+resources:
+  requests:
+    cpu: 100m
+    memory: 512Mi
+  limits:
+    cpu: 100m
+    memory: 512Mi
