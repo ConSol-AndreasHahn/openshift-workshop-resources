@@ -19,4 +19,4 @@ Oder mit http und localhost:8080 wenn ihr über port-forward arbeitet
 
 
 Helm-Chart Configmap
-oc create configmap static-site --from-literal=index.html='<html><body><p>Hello world!</p></body></html>
+oc create configmap static-site --from-literal=index.html='<html><body><p>Hello world!</p></body></html>'
