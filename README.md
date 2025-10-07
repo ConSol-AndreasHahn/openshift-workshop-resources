@@ -8,5 +8,5 @@
 * Solutions are rolled out via FluxCD, so for example helm chart are applied differently
 
 ## Workshop-Environment
-* OpenShift Console: https://console-openshift-console.apps.cluster-fhk7l.dynamic.redhatworkshops.io
-* OpenShift API: https://api.cluster-fhk7l.dynamic.redhatworkshops.io:6443
+* OpenShift Console: https://console-openshift-console.apps.cluster-vgcmd.dynamic.redhatworkshops.io
+* OpenShift API: https://api.cluster-vgcmd.dynamic.redhatworkshops.io:6443
