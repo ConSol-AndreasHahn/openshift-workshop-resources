@@ -20,3 +20,6 @@ Oder mit http und localhost:8080 wenn ihr über port-forward arbeitet
 
 Helm-Chart Configmap
 oc create configmap static-site --from-literal=index.html='<html><body><p>Hello world!</p></body></html>'
+
+
+https://showroom-showroom-user1.apps.cluster-vgcmd.dynamic.redhatworkshops.io/
