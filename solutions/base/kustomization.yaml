@@ -2,4 +2,5 @@ resources:
   - workshop.namespace.yaml
   - workshop.sa.yaml
   - view.rolebinding.yaml
-  - deny-ingress.networkpolicy.yaml
+  - allow-ingress-controller.networkpolicy.yaml
+  - deny-by-default.networkpolicy.yaml
