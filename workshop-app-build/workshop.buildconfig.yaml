@@ -13,7 +13,8 @@ spec:
   failedBuildsHistoryLimit: 5
   strategy:
     type: Docker
-    dockerStrategy: {}
+    dockerStrategy:
+      dockerfilePath: dockerfile
   postCommit: {}
   source:
     type: Git
