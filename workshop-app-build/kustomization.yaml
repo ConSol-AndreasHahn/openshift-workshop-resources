@@ -1,0 +1,7 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- solutions-github.secret.yaml
+- workshop-app.namespace.yaml
+- workshop-app.buildconfig.yaml
+- workshop-app.imagestream.yaml
