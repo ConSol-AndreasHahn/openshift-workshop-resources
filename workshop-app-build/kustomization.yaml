@@ -5,3 +5,4 @@ resources:
 - workshop.namespace.yaml
 - workshop.buildconfig.yaml
 - workshop.imagestream.yaml
+- image-puller.rolebinding.yaml
