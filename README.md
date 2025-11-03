@@ -7,19 +7,3 @@
 * Watch and review solutions rather in OpenShift cluster and not in here
 * Solutions are rolled out via FluxCD, so for example helm chart are applied differently
 
-## Workshop-Environment
-* OpenShift Console: https://console-openshift-console.apps.cluster-vgcmd.dynamic.redhatworkshops.io
-* OpenShift API: https://api.cluster-vgcmd.dynamic.redhatworkshops.io:6443
-
-
-Curl für Health-Checks
-curl -X POST https://$ROUTE/api/health -H "Content-Type: application/json" -d '{"healthy": false}'
-
-Oder mit http und localhost:8080 wenn ihr über port-forward arbeitet
-
-
-Helm-Chart Configmap
-oc create configmap static-site --from-literal=index.html='<html><body><p>Hello world!</p></body></html>'
-
-
-https://showroom-showroom-user1.apps.cluster-vgcmd.dynamic.redhatworkshops.io/
