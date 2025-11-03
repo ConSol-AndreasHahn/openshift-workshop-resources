@@ -1,9 +1,8 @@
 resources:
-  - ../../base
-  - term-message.deployment.yaml
-
+- ../base
+- term-message.deployment.yaml
 
 namespace: solution-12
 
 patchesStrategicMerge:
-  - patch-namespace.yaml
+- patch-namespace.yaml
