@@ -22,7 +22,7 @@ spec:
       ref: 'refs/heads/main'
     contextDir: "workshop-app-ts"
     sourceSecret:
-      name: solutions-github
+      name: workshop-app-github
   runPolicy: Serial
   triggers:
   - type: ConfigChange
