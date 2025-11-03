@@ -15,7 +15,7 @@ spec:
       serviceAccountName: image-puller
       containers:
       - name: workshop-app
-        image: image-registry.openshift-image-registry.svc:5000/workshop-app/workshop-app:lastest
+        image: image-registry.openshift-image-registry.svc:5000/workshop-app/workshop-app:latest
         env:
         - name: GREETING_DEFAULT
           value: "Max Mustermann"
