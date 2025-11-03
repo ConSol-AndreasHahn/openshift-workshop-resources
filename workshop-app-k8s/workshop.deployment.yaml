@@ -16,14 +16,14 @@ spec:
     spec:
       serviceAccountName: image-puller
       containers:
-        - name: workshop-app
-          image: image-registry.openshift-image-registry.svc:5000/gh-runners/nextjs-workshop:latest
-          ports:
-            - containerPort: 3000
-          resources:
-            requests:
-              cpu: 10m
-              memory: 64Mi
-            limits:
-              cpu: 100m
-              memory: 256Mi
+      - name: workshop-app
+        image: image-registry.openshift-image-registry.svc:5000/workshop-app/workshop-app:lastest
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            cpu: 10m
+            memory: 64Mi
+          limits:
+            cpu: 100m
+            memory: 256Mi
