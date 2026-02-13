@@ -27,7 +27,7 @@ spec:
         memory: 512Mi
     ingress:
       enabled: true
-      hostname: nginx-solution-13.apps.cluster-rsv2n.dynamic.redhatworkshops.io
+      hostname: nginx-solution-13.apps.cluster-qqwqv.dynamic.redhatworkshops.io
       tls: true
       selfSigned: true
 
