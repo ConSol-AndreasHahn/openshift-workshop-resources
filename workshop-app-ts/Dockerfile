@@ -1,4 +1,4 @@
-FROM docker.io/node:24-alpine AS builder
+FROM registry.redhat.io/ubi10/nodejs-24-minimal:10.1 AS builder
 WORKDIR /app
 
 COPY package.json package-lock.json ./
@@ -8,7 +8,7 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM docker.io/node:24-alpine
+FROM registry.redhat.io/ubi10/nodejs-24-minimal:10.1
 WORKDIR /app
 
 COPY --from=builder /app/node_modules ./node_modules
