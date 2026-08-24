@@ -1,0 +1,4 @@
+volumes:
+- name: data
+  persistentVolumeClaim:
+    claimName: app-data

@@ -1,0 +1,3 @@
+volumeMounts:
+- name: config
+  mountPath: /config

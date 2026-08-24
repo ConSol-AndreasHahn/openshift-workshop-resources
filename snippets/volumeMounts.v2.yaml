@@ -1,0 +1,4 @@
+volumeMounts:
+- name: config
+  mountPath: /config/config.yaml
+  subPath: config.yaml

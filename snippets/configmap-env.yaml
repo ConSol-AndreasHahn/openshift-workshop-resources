@@ -1,0 +1,6 @@
+env:
+- name: HOSTNAME
+  valueFrom:
+    configMapKeyRef:
+      name: app-config
+      key: hostname

@@ -1,0 +1,4 @@
+volumes:
+- name: config
+  configMap:
+    name: app-config
